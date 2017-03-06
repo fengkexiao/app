@@ -1,0 +1,23 @@
+@media screen and (max-width: 414px){
+    .tourimg1{background-image: url(../images/1.jpg);width: 100%;height: 736px;background-size:cover;background-repeat: no-repeat;}
+    .tourimg2{background-image: url(../images/2.jpg);width: 100%;height: 736px;background-size:cover;background-repeat: no-repeat;}
+    .tourimg3{background-image: url(../images/3.jpg);width: 100%;height: 736px;background-size:cover;background-repeat: no-repeat;}
+    .sc_wrapd{width: 100%;height:640px;}
+    .tec {
+        color: #BFBFBF;
+        font-family: '微软雅黑';
+        position: absolute;
+        z-index: 3;
+        top: 143px;
+        left: 137px;
+        font-size: 16px;
+        width: 140px;
+    }
+
+}
+@media screen and (max-width: 375px){
+    .tourimg1{background-image: url(../images/1.jpg);width: 100%;height: 627px;background-size:cover;background-repeat: no-repeat;}
+    .tourimg2{background-image: url(../images/2.jpg);width: 100%;height: 627px;background-size:cover;background-repeat: no-repeat;}
+    .tourimg3{background-image: url(../images/3.jpg);width: 100%;height: 627px;background-size:cover;background-repeat: no-repeat;}
+
+}
