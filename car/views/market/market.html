@@ -1,0 +1,37 @@
+<ion-nav-bar class="bar-dark">
+    <ion-nav-back-button>后退</ion-nav-back-button>
+    <ion-view view-title="车位市场">
+        <ion-content>
+            <div class="list">
+            <select  style=" float: left;width: 50%;height:44px;background: #0a0f0f;line-height: 44px;color:#fff; border: none">
+                <option value="城区选择" >城区选择</option>
+                <option value="金牛区">金牛区</option>
+                <option value="成华区">成华区</option>
+                <option value="武侯区">武侯区</option>
+                <option value="锦江区">锦江区</option>
+                <option value="青羊区">青羊区</option>
+                <option value="高新区">高新区</option>
+            </select>
+            <select  style="float: left; width: 50%;height:44px;background: #0a0f0f;line-height: 44px;color:#fff; border: none;" >
+                <option value="类型" >类型</option>
+                <option value="全部">全部</option>
+                <option value="包月">包月</option>
+                <option value="次数">次数</option>
+            </select>
+            </div>
+            <div class="list" style="margin-top: 42px;">
+                <a ui-sref="markets">
+                <div ng-repeat="item in markets" class="item" style="background:url('{{item.imgs}}') no-repeat;height:120px;width:100%; background-size: cover;border: none;">
+                    <h2 style="color:#fff; padding-top: 40px; font-size: 20px;">{{item.h}}</h2>
+                    <img ng-src="{{item.img}}" style="height:24px;width:15px; padding-top: 4px; float: left">
+                    <p style="float: left;color:#fff; font-size: 15px; padding-top: 5px; padding-left: 10px;">{{item.p}}<span style="padding-left: 10px;">{{item.span}}</span></p>
+                </div>
+                </a>
+            </div>
+            <ion-infinite-scroll on-infinite="getRestaurants()"
+                                 ng-if="page<total"
+                                 immediate-check="false">
+            </ion-infinite-scroll>
+        </ion-content>
+    </ion-view>
+</ion-nav-bar>

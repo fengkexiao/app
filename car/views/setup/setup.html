@@ -1,0 +1,31 @@
+<ion-nav-bar class="bar-dark ">
+    <ion-nav-back-button>后退</ion-nav-back-button>
+    <ion-view view-title="设置">
+        <ion-content>
+            <div class="list">
+                <div class="item item-divider item-bar-light">新消息提醒</div>
+                <div class="item item-toggle" style="z-index: auto">新消息通知
+                    <label class="toggle toggle-assertive" >
+                        <input type="checkbox">
+                        <div class="track" style="display:block"><div class="handle"></div></div>
+                    </label>
+                </div>
+                <div class="item item-toggle" style="z-index: auto">声音
+                    <label class="toggle toggle-assertive">
+                        <input type="checkbox">
+                        <div class="track" style="display:block"><div class="handle"></div></div>
+                    </label>
+                </div>
+                <div class="item item-toggle" style="z-index: auto">震动
+                    <label class="toggle toggle-assertive">
+                        <input type="checkbox">
+                        <div class="track" style="display:block"><div class="handle"></div></div>
+                    </label>
+                </div>
+                <div class="item item-divider item-bar-light">密码服务</div>
+                <div class="item item-toggle">修改密码</div>
+            </div>
+            <a ui-sref="signIn" style="text-decoration: none"><button class="button button-full button-bar-light">退出登录</button></a>
+        </ion-content>
+    </ion-view>
+</ion-nav-bar>

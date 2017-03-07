@@ -1,0 +1,36 @@
+
+<ion-view>
+    <ion-header-bar style="text-align: center; background: #344b4a" >
+        <a ui-sref="quick"><div class="icon ion-chevron-left" style=" line-height: 38px;font-size: 18px; margin-top: -5px;color:#fff;"> 后退</div></a>
+        <h4 style="float: left;margin-top:5px;text-align: center;color: #fff;font-size: 17px; padding-left: 5%" class="col-offset-25">停车缴费</h4>
+    </ion-header-bar>
+<ion-tabs class="tabs-dark tabs-button-top tabs-top">
+<ion-tab title="车牌缴费" class="ion ion-dark ">
+    <ion-view>
+        <ion-content style="background:url('images/003_02.png') no-repeat; background-size: cover;">
+            <div class="col-offset-10"  style="color:#fff; margin-top:40px;line-height: 44px;text-align: center;font-size: 20px;height: 44px;width:120px; float: left; border: 1px solid #eee;border-bottom-left-radius: 8px;border-top-left-radius: 8px;">川A</div>
+            <div style=" color:#fff;line-height: 44px;margin-top:40px;text-align: center;font-size: 20px; height: 44px;width:180px; float: left; border: 1px solid #eee;border-bottom-right-radius: 8px;border-top-right-radius: 8px;">*553*</div>
+            <p style="color:#fff;float: left; margin-top: 25px; margin-left: 55px;">停车时长</p>
+            <div style="color:#fff; margin-top:50px; margin-left:-75px;line-height: 44px;text-align: center;font-size: 20px;height: 44px;width:150px; float: left; border: 1px solid #eee;border-bottom-left-radius: 8px;border-top-left-radius: 8px;">07:30</div>
+            <div style="color:#fff; line-height: 44px;margin-top:50px;text-align: center;font-size: 20px; height: 44px;width:150px; float: left; border: 1px solid #eee;border-bottom-right-radius: 8px;border-top-right-radius: 8px;">13:00</div>
+            <p style="color:#fff;float: left; margin-top: 25px; margin-left: 55px;">停车费用</p>
+            <div class="col-offset-10"  style="color:#fff;line-height: 44px; margin-top: -5px;text-align: center;font-size: 20px;height: 44px;width:300px; float: left; border: 1px solid #eee; border-radius: 8px;">￥15</div>
+            <button class="button button-balaced button-full col-offset-10" style="width:300px; float: left; border-radius: 8px; margin-top: 80px;" ng-click="click()">去缴费</button>
+        </ion-content>
+    </ion-view>
+</ion-tab>
+<ion-tab title="扫码缴费" class="ion ion-dark" style="line-height: 44px;">
+    <ion-view>
+        <ion-content style="background: #040c0c">
+            <div style="background: url('images/003_03.png') no-repeat; background-size: cover; height: 220px;width:230px; margin: 100px 0 20px 75px"></div>
+            <p style="text-align: center ;color:#fff; line-height: 25px;">将二维码/条码放在框内,<br>即可自动扫描，扫描不成功可手动输入</p>
+            <div style="margin:30px 0 0 50px; background: rgba(0,0,0,0);">
+                <input type="text" id="ka" placeholder="请输入卡号" style="
+                 height:50px;float: left; background: rgba(0,0,0,0);width:200px; padding-left: 10px;border: 1px solid #fff; border-bottom-left-radius: 8px;border-top-left-radius: 8px;color:#fff;">
+                <input type="button" ng-click="click()" style="  background: #ac927b;float: left;height:50px;border: 1px solid #fff; width:80px;color:#fff;border-bottom-right-radius: 8px;border-top-right-radius:8px;" value="去缴费">
+            </div>
+        </ion-content>
+    </ion-view>
+</ion-tab>
+</ion-tabs>
+</ion-view>

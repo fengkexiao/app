@@ -1,0 +1,33 @@
+
+    <ion-view>
+        <ion-header-bar style="text-align: center; background: #344b4a" >
+            <a ui-sref="quick"><div class="icon ion-chevron-left" style=" line-height: 38px;font-size: 18px; margin-top: -5px;color:#fff;"> 后退</div></a>
+            <h4 style="float: left;margin-top:5px;text-align: center;color: #fff;font-size: 17px; padding-left: 5%" class="col-offset-25">找车</h4>
+        </ion-header-bar>
+        <ion-tabs class="tabs-dark tabs-button-top">
+            <ion-tab title="车牌号" class="ion ion-dark ">
+                <ion-view>
+                    <ion-content style="background:url('images/003_02.png') no-repeat; background-size: cover;">
+                        <div class="ion-input ion-input">
+                            <input class="col-offset-10" type="text" placeholder='请输入车牌号' style=" ;float: left;background: rgba(0,0,0,0);border: 1px solid #fff; margin-top: 50%;padding-left: 10px; border-radius: 8px;height: 50px;width:230px;color:#fff; border-bottom:1px solid #fff;">
+                            <button class="button ion-button" style="margin-top: 50%; margin-left: 10px;height:50px; line-height: 50px;">确定</button>
+                        </div>
+                    </ion-content>
+                </ion-view>
+            </ion-tab>
+            <ion-tab title="拍照" class="ion ion-dark" style="line-height: 44px;">
+                <ion-view>
+                    <ion-content style="background: #040c0c">
+                        <div style="background: url('images/6_02.png') no-repeat; background-size: cover; height:574px;width:100%;"></div>
+                    </ion-content>
+                </ion-view>
+            </ion-tab>
+            <ion-tab title="扫码" class="ion ion-dark" style="line-height: 44px;">
+                <ion-view>
+                    <ion-content style="background: #040c0c">
+                        <div style="background: url('images/7_03.png') no-repeat; background-size: cover; height: 220px;width:230px; margin: 150px 0 20px 75px"></div>
+                    </ion-content>
+                </ion-view>
+            </ion-tab>
+        </ion-tabs>
+    </ion-view>

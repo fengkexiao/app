@@ -1,0 +1,65 @@
+
+
+var myapp=angular.module("myapp",["ionic"]);
+//设置路由
+myapp.config(function($stateProvider,$urlRouterProvider){
+    $stateProvider.state("signIn",{
+        url:"/signIn",
+        templateUrl:"views/signIn/signIn.html",
+        controller:"singInCtrl"
+    }).state("quick",{
+        url:"/quick",
+        templateUrl:"views/quick/quick.html"
+    }).state("register",{
+        url:"/register",
+        templateUrl:"views/register/register.html",
+        controller:"registerCtrl"
+    }).state("setup",{
+        url:"/setup",
+        templateUrl:"views/setup/setup.html"
+    }).state("navigation",{
+        url:"/navigation",
+        templateUrl:"views/navigation/navigation.html"
+    }).state("pay",{
+        url:"/pay",
+        templateUrl:"views/pay/pay.html",
+        controller:"payCtrl"
+    }).state("market",{
+        url:"/market",
+        templateUrl:"views/market/market.html",
+        controller:"marketCtrl"
+    }).state("markets",{
+        url:"/markets",
+        templateUrl:"views/markets/markets.html",
+        controller:"marketsCtrl"
+    }).state("bespeak",{
+        url:"/bespeak",
+        templateUrl:"views/bespeak/bespeak.html",
+        controller:"bespeakCtrl"
+    }).state("findCar",{
+        url:"/findCar",
+        templateUrl:"views/findCar/findCar.html"
+    }).state("personal",{
+        url:"/personal",
+        templateUrl:"views/personal/personal.html"
+    }).state("scanning",{
+        url:"/scanning",
+        templateUrl:"views/scanning/scanning.html"
+    }).state("record",{
+        url:"/record",
+        templateUrl:"views/record/record.html"
+    }).state("aboutUs",{
+        url:"/aboutUs",
+        templateUrl:"views/aboutUs/aboutUs.html"
+    }).state("lookFor",{
+        url:"/lookFor",
+        templateUrl:"views/lookFor/lookFor.html"
+    }).state("manage",{
+        url:"/manage",
+        templateUrl:"views/manage/manage.html"
+    }).state("account",{
+        url:"/account",
+        templateUrl:"views/account/account.html"
+    });
+    $urlRouterProvider.otherwise("/register");
+});

@@ -1,0 +1,11 @@
+
+<ion-nav-view style="background:url('images/1.jpg') no-repeat;background-size: cover; width: 100%;">
+    <ion-content>
+        <h1 class="title text-center" style="padding-top: 20%; font-size: 45px; line-height: 60px; color: #fff;">欢迎</h1>
+        <p class="text-center" style="line-height: 48px;font-size: 25px; color:#fff;">路上有我  伴你同行<br>车位在等你</p>
+        <input type="text"  class="text-center" ng-model="data.text " style="background:rgba(0,0,0,0);line-height: 100%;color:#fff; padding:20px;font-size: 25px; width:70%; border: 1px solid #10FFE4;border-radius: 39px; margin: auto; margin-bottom: 29px;" placeholder="手机号">
+        <input type="password" class="text-center" ng-model="data.password" style="background:rgba(0,0,0,0);color:#fff;line-height: 100%;padding:20px;font-size: 25px; width:70%; border: 1px solid #10FFE4;border-radius: 39px; margin: auto; margin-bottom: 29px;" placeholder="密码">
+        <a ui-sref="quick"><button class="text-center" ng-disabled="!data.text || !data.password" style="background:#ac927b;color:#FFFFFF;line-height: 100%;font-size: 25px;padding:8px;display: block;border: 1px solid #fff; width:70%;border-radius: 39px; margin: auto; margin-bottom: 29px;">登录</button></a>
+        <div class="col" style=" margin:0 auto;text-align: center;font-size: 25px; color:#fff; cursor: pointer"><a style="color:#fff;cursor: pointer">忘记密码 </a> | <span><a ui-sref="register" style="color:#fff;"> 注册</a></span></div>
+    </ion-content>
+</ion-nav-view>

@@ -1,0 +1,7 @@
+.tab-title{ line-height: 44px;}
+.tab-item{ background: #575A57;}
+.scroll{transform: translate3d(0px, 0px, 0px) }
+.item{ border-right: none;}
+.ion-navigate:before{ padding-top: 10px;}
+.ion-ios-mic:before{padding-top: 10px;}
+.button-icon:before{ border: none;}
