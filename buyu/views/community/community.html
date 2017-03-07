@@ -1,0 +1,84 @@
+<ion-view title="心路历程" id="community">
+    <ion-nav-back-button>
+        <i class="icon ion-ios-arrow-left"></i>
+    </ion-nav-back-button>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-compose"></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+        <div class="title">
+            <a href="" ng-click="subheadOn()">心路历程 <i class="icon ion-ios-arrow-down"></i> </a>
+        </div>
+    </ion-nav-title>
+
+    <div class="subhead" id="subhead_community">
+        <div class="inner">
+            <div class="inner_inner">
+                <div class="row">
+                    <div class="col">
+                        <i class="icon ion-android-bicycle"></i>
+                    </div>
+                    <div class="col">
+                        <i class="icon ion-social-snapchat-outline"></i>
+                    </div>
+                    <div class="col">
+                        <i class="icon ion-ios-videocam-outline"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>心路历程</p>
+                    </div>
+                    <div class="col">
+                        <p>畅聊</p>
+                    </div>
+                    <div class="col">
+                        <p>直播</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <ion-content>
+
+        <ion-slide-box auto-play="true" does-continue="true" slide-interval="3000">
+            <ion-slide  ui-sref="tabs.person">
+                <div class="pic"><img src="images/community_02.jpg"/> </div>
+            </ion-slide >
+            <ion-slide  ui-sref="tabs.person">
+                <div class="pic"><img src="images/community_04.jpg"/> </div>
+            </ion-slide>
+            <ion-slide  ui-sref="tabs.person">
+                <div class="pic"><img src="images/community_06.jpg"/> </div>
+            </ion-slide>
+        </ion-slide-box>
+        <div class="content">
+            <div class="card" ng-repeat=" item in data" ui-sref="tabs.person">
+                <div class="top clear">
+                    <div class="pic">
+                        <img ng-src="{{item.head}}"/>
+                    </div>
+                    <a href="" class="attention"  ng-click="support(item)" ng-class="item.attentioned==true? 'attention2' : '' ">+关注</a>
+                    <h2>{{item.name}}</h2>
+                    <p>{{item.time}}</p>
+                </div>
+                <div class="text">
+                    <h1>{{item.title}}</h1>
+                    <h3>{{item.text}}</h3>
+                </div>
+                <div class="pic">
+                    <img ng-src="{{item.pic}}"/>
+                </div>
+                <div class="support">
+                    <i class="icon ion-android-favorite-outline" style="" ng-click="support(item)" > <span> {{item.attention}}</span></i>
+                    <i class="icon ion-chatbox-working" style="margin-left: 5px;"> <span> {{item.comment}}</span></i>
+                </div>
+            </div>
+        </div>
+
+        <!--无限滚动，上拉刷新-->
+        <ion-infinite-scroll  distance="1%" immediate-check="true" on-infinite="loadMore()"></ion-infinite-scroll>
+    </ion-content>
+    <button class="to-top button-icon ion-android-arrow-up " style="font-size: 30px; color: #666;" ng-click="toTop()"></button>
+</ion-view>

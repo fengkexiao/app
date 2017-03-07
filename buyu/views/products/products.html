@@ -1,0 +1,89 @@
+<ion-view title="商品" hide-back-button="true" id="products">
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-ios-search-strong" ng-click="subheadOn()"></button>
+    </ion-nav-buttons>
+
+
+
+    <div class="subhead" id="subhead_products">
+        <div class="inner">
+            <div class="list">
+                <div class="item item-input-inset">
+                    <label class="item-input-wrapper">
+                        <input type="text" placeholder="输入关键词">
+                    </label>
+                    <button class="button button-icon ion-ios-search-strong" style=""></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <ion-content class="product_content">
+        <!--无限滚动，上拉刷新-->
+        <ion-infinite-scroll  distance="1%" immediate-check="true" on-infinite="loadMore()"></ion-infinite-scroll>
+
+        <ion-slide-box auto-play="true" does-continue="true" slide-interval="3000">
+                        <ion-slide>
+                <div class="pic"><img src="images/nav_02.jpg"/> </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="pic"><img src="images/nav_04.jpg"/> </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="pic"><img src="images/nav_06.jpg"/> </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="pic"><img src="images/nav_08.jpg"/> </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="pic"><img src="images/nav_10.jpg"/> </div>
+            </ion-slide>
+        </ion-slide-box>
+
+        <ion-scroll direction="x" style="overflow: hidden">
+            <div class="product_row" style="width: 800px">
+                <div class="row">
+                    <div class="col"><a href=""><img src="images/product_icon_03.jpg"/></a>  </div>
+                    <div class="col"><a href=""><img src="images/product_icon_05.jpg"/></a> </div>
+                    <div class="col"><a href=""><img src="images/product_icon_07.jpg"/></a> </div>
+                    <div class="col"><a href=""><img src="images/product_icon_09.jpg"/></a> </div>
+                    <div class="col"><a href=""><img src="images/product_icon_11.jpg"/></a> </div>
+                    <div class="col"><a href=""><img src="images/product_icon_03.jpg"/></a>  </div>
+                    <div class="col"><a href=""><img src="images/product_icon_05.jpg"/></a> </div>
+                    <div class="col"><a href=""><img src="images/product_icon_07.jpg"/></a> </div>
+                    <div class="col"><a href=""><img src="images/product_icon_09.jpg"/></a> </div>
+                    <div class="col"><a href=""><img src="images/product_icon_11.jpg"/></a> </div>
+                </div>
+                <div class="row">
+                    <div class="col"> <a href=""> 陶艺</a> </div>
+                    <div class="col"> <a href=""> 布艺</a> </div>
+                    <div class="col"> <a href=""> 礼盒</a> </div>
+                    <div class="col"> <a href=""> 刺绣</a> </div>
+                    <div class="col"> <a href=""> 纸艺</a> </div>
+                    <div class="col"> <a href=""> 陶艺</a> </div>
+                    <div class="col"> <a href=""> 布艺</a> </div>
+                    <div class="col"> <a href=""> 礼盒</a> </div>
+                    <div class="col"> <a href=""> 刺绣</a> </div>
+                    <div class="col"> <a href=""> 纸艺</a> </div>
+                </div>
+            </div>
+        </ion-scroll>
+
+        <div class="recommend">
+            <h2>推荐<span>纯手工原创</span></h2>
+            <div class="products">
+                <div class="product" ng-repeat="item in products">
+                    <div class="inner">
+                        <a href=""><img ng-src="{{item.imgUrl}}"/> </a>
+                        <h3>{{item.titleH3}}</h3>
+                        <h4>{{item.titleH4}}</h4>
+                        <p>{{item.price | currency:"￥"}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+    <button class="to-top button-icon ion-android-arrow-up " style="font-size: 30px; color: #666;" ng-click="toTop()"></button>
+</ion-view>

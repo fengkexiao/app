@@ -1,0 +1,55 @@
+<ion-view title="缘来是你" id="person">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-compose"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="content">
+            <div class="person">
+                <div class="top clear">
+                    <div class="pic">
+                        <img src="images/pic_06.jpg"/>
+                    </div>
+                    <a href="" class="attention"  ng-click="data.attentioned=!data.attentioned" ng-class="data.attentioned==true? 'attention2' : '' ">+关注</a>
+                    <h2>缘来是你</h2>
+                    <p>讲述关于我的故事</p>
+                </div>
+                <div class="text">
+                    <h1>关于我和我的设计</h1>
+                    <div class="support clear">
+                        <div class="left">
+                            <i class="icon ion-android-favorite-outline"></i> <span>563</span>
+                        </div>
+                        <div class="right">
+                            9月21日
+                        </div>
+                    </div>
+                    <img src="images/person_pic_02.jpg">
+                    <p>设计没有捷径，这条路很长，也很复杂，这是在很长一段时间当中，经验不断积累、能量不断转换、感悟不断加深的过程，我还在路上，懂得感恩让我活得很踏实，不但学习让我觉得很充实，要保持设计最初的那点梦想就如同航行中的灯塔，要看得见，要往哪走……</p>
+                    <img src="images/person_pic_04.jpg">
+                    <p>     最近老不争气、老淘气、老不听话，制定的计划没有落地，设计是解放集体实现个人价值的体现，没有一点信念和坚持的态度是走不远的。面对萧条的市场；面对装修的变革；面对千篇一律的设计。跨界设计、差异化设计是当前必须要做、必须要面对的事！最近一直在想，想着如何让感性的设计得到理性的升华，想着如何寻找一些合适的母体让自己的设计落地，做一些没有地域限制风格。</p>
+                    <img src="images/person_pic_06.jpg">
+                    <p>没有时间概念的风格，没有风格束缚的风格！这是当下必须要去走的路，在生活中自己常常容易被感动，一片树叶、一块碎石、一句文字、一丝微笑……，这感动的力量很强大，它将我整个人推向设计这条路，想着这辈子就干这个了！</p>
+                    <img src="images/person_pic_08.jpg">
+                    <p>这几年一直在学习、思考、总结，从最初的拿到户型不知道如何设计，从何下手；慢慢的过渡到形的设计，如何做的漂亮一些，丰富一些；到现在对设计又有了进一步的理解和加深，考虑的问题也具有多重性和复杂性，如何将空间的收纳做到极致，在使用功能的舒适性和通行空间的便利性都解决的前提下，我们还能不能对这个空间做进一步升华，植入一些设计主题和融入一些设计倡导，让整个空间富有灵魂感和具有思考性，让我们住在里面觉得很</p>
+                    <img src="images/person_pic_10.jpg">
+                    <p>舒适、很惬意、很自在，其实家以什么方式来表达并不重要，重要的是它一定要呈现出它最舒服、最舒展、最从容的那一面。设计是一条没有终点的路，当我踏上这条路就意味着我得用一辈子去走，去思考，去面对，设计的传统、当代和未来！去从历史记忆的碎片中寻找设计灵感的种子！我属于这个时代，我得影响这个时代！</p>
+                </div>
+            </div>
+            <div class="comment">
+                <h1>评论</h1>
+                <div class="list">
+                    <div class="item item-avatar-left" ng-repeat="item in data">
+                        <img ng-src="{{item.img}}"/>
+                        <h2>{{item.name}}</h2>
+                        <p>{{item.comment}}</p>
+                    </div>
+
+                    <div class="item" style="padding:0;border: none;" ng-click="readMore()">
+                        <p class="more">点击查看更多评论</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

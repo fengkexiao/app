@@ -1,0 +1,104 @@
+<ion-view title="专题" hide-back-button="true" id="home">
+    <ion-nav-buttons side="left" >
+        <button class="button button-icon ion-ios-more" ng-click="toggleLeft()"></button>
+    </ion-nav-buttons>
+
+    <ion-nav-title>
+    <div class="title">
+        <a href="" ng-click="subheadOn()">专题 <i class="icon ion-ios-arrow-down"></i> </a>
+    </div>
+    </ion-nav-title>
+
+    <div class="subhead" id="subhead_home">
+        <div class="inner">
+            <div class="inner_inner">
+                <div class="row">
+                    <div class="col">
+                        <i class="icon ion-social-github-outline"></i>
+                    </div>
+                    <div class="col">
+                        <i class="icon ion-ios-paper-outline"></i>
+                    </div>
+                    <div class="col">
+                        <i class="icon ion-ios-pricetags-outline"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>设计师</p>
+                    </div>
+                    <div class="col">
+                        <p>作品</p>
+                    </div>
+                    <div class="col">
+                        <p>教程</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <ion-content >
+        <ion-slide-box auto-play="2000" does-continue="true" show-pager="false">
+            <ion-slide ui-sref="tabs.homePerson">
+                <div class="pic"><img src="images/home_pic_01.jpg"/> </div>
+                <div class="rahmen">
+                    <img src="images/home_bg_03.png">
+                    <div class="text">
+                        <div class="pic">
+                            <img src="images/pic_01.jpg"/>
+                        </div>
+                        <h3>拾夏 Anny</h3>
+                        <h4>我的眼睛里藏着一座森林</h4>
+                        <p>拾夏有着设计师和手艺人的双重身份，她钟爱手工制作，研究陶瓷、麻布....</p>
+                    </div>
+                </div>
+            </ion-slide>
+            <ion-slide  ui-sref="tabs.homePerson">
+                <div class="pic"><img src="images/home_pic_02.jpg"/> </div>
+                <div class="rahmen">
+                    <img src="images/home_bg_03.png">
+                    <div class="text">
+                        <div class="pic">
+                            <img src="images/pic_02.jpg"/>
+                        </div>
+                        <h3>芸所 cloudbox</h3>
+                        <h4>做一种未来感的中式设计</h4>
+                        <p>对于陶艺，Lucie Rie 有着自己的专注坚持她的作品没有浅薄夸张的花纹，也不在乎...</p>
+                    </div>
+                </div>
+            </ion-slide>
+            <ion-slide  ui-sref="tabs.homePerson">
+                <div class="pic"><img src="images/home_pic_03.jpg"/> </div>
+                <div class="rahmen">
+                    <img src="images/home_bg_03.png">
+                    <div class="text">
+                        <div class="pic">
+                            <img src="images/pic_03.jpg"/>
+                        </div>
+                        <h3>四喜一 kan</h3>
+                        <h4>创新不忘旧</h4>
+                        <p>我们的作品其实就是故乡的河流，草原，星空，白桦林。</p>
+                    </div>
+                </div>
+            </ion-slide>
+            <ion-slide  ui-sref="tabs.homePerson">
+                <div class="pic"><img src="images/home_pic_04.jpg"/> </div>
+                <div class="rahmen">
+                    <img src="images/home_bg_03.png">
+                    <div class="text">
+                        <div class="pic">
+                            <img src="images/pic_04.jpg"/>
+                        </div>
+                        <h3>西西弗 Tony</h3>
+                        <h4>粗茶淡饭</h4>
+                        <p>记《粗茶淡饭》作品背后的血泪史,要做一份最用心也最平凡的礼。</p>
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+
+
+    </ion-content>
+</ion-view>

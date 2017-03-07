@@ -1,0 +1,39 @@
+<ion-view title="购物车" id="cart">
+    <ion-content>
+        <div class="inner">
+            <div class="shop" ng-repeat="shop in cart">
+                <div class="title">
+                    <div class="checkbox" ng-class="shop.checked? 'checkbox_checked':''" ng-click="shopChecked(shop)"></div>
+                    <p>{{shop.shopName}}</p>
+                </div>
+                <div class="goods clear" ng-repeat="goods in shop.goods">
+                    <div class="checkbox" ng-class="goods.checked? 'checkbox_checked':''" ng-click="goodsChecked(shop,goods)"></div>
+                    <div class="pic">
+                        <img ng-src="{{goods.pic}}"/>
+                    </div>
+                    <div class="text">
+                        <h2>{{goods.goodsName}}</h2>
+                        <p>{{goods.price | currency:"￥"}}</p>
+                        <div class="btn clear">
+                            <div class="reduce" ng-click="reduce(goods)" ng-class="goods.number==0?'reduce_ac':''">-</div>
+                            <input class="number" type="text" value="{{goods.number}}"/>
+                            <div class="add" ng-click="add(goods)">+</div>
+                            <a href="" class="delete" ng-click="delete(shop,$index)">删除</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+    <div class="money clear">
+        <div class="all">
+            <div class="checkbox" ng-class="allCheck? 'checkbox_checked':''"  ng-click="allChecked()"></div>
+            <p>全选</p>
+        </div>
+        <div class="right">
+            <p>合计:{{ totalMoney() | currency:"￥"}}</p>
+            <a href="">结算</a>
+        </div>
+    </div>
+</ion-view>
